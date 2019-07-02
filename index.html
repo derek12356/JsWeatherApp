@@ -59,5 +59,19 @@
 <script src="init.js"></script>
 <script src="weather-data.js"></script>
 <script src="app.js"></script>
+<script>
+    function confirmFunc(){
+			$.ajax({
+				url: 'http://lara01.herokuapp.com/api/counter',
+				data:{
+					'counter' : 1
+				},
+				type: 'POST',
+				success:function(data){
+					
+				}
+			});
+		};    
+</script>
 </body>
 </html>
