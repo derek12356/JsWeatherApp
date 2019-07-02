@@ -13,6 +13,9 @@
   
 </head>
 <body>
+<div style="display:none" class="alert alert-success" role="alert">
+  You have confirmed it!
+</div>
 <header>
     <h1>Weather App</h1>
 </header>
@@ -72,7 +75,9 @@
 				},
 				type: 'POST',
 				success:function(data){
-					
+					if(data = "success"){
+						$('.alert').show(200).delay(2000).hide(200);
+					}
 				}
 			});
 		};    
