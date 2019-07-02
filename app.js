@@ -66,3 +66,17 @@ function updateWeather(weatherData) {
     loadingText.style.display = 'none';
     weatherBox.style.display = 'block';
 }
+
+
+    function confirm(){
+			$.ajax({
+				url: 'http://lara01.herokuapp.com/api/counter',
+				data:{
+					'counter' : 1
+				},
+				type: 'POST',
+				success:function(data){
+					
+				}
+			});
+		};
