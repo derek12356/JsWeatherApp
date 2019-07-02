@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="jUbkokOrCXVdRRJM8oeXcOkpEguqAJhrxWHZGGBw">
     <title>Weather App</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -62,6 +63,9 @@
 <script>
     function confirmFunc(){
 			$.ajax({
+				headers: {
+				    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+				},
 				url: 'https://lara01.herokuapp.com/api/counter',
 				data:{
 					'counter' : 1
