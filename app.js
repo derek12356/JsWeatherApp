@@ -68,15 +68,4 @@ function updateWeather(weatherData) {
 }
 
 
-    function confirmFunc(){
-			$.ajax({
-				url: 'http://lara01.herokuapp.com/api/counter',
-				data:{
-					'counter' : 1
-				},
-				type: 'POST',
-				success:function(data){
-					
-				}
-			});
-		};
+
